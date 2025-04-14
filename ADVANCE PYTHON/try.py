@@ -1,0 +1,17 @@
+from tkinter import *
+root=Tk()
+def insert_number(number):
+    dialer_entry.insert(INSERT,number)
+dialer=Frame(root,bg="black")
+dialer.pack()
+dialer.pack_propagate(False)
+dialer.config(width=300,height=400)
+entry=Frame(dialer,bg="red")
+entry.pack()
+entry.pack_propagate()
+entry.config(width=210, height=80)
+dialer_entry=Entry(entry,bg="black", fg="white")
+dialer_entry.place(height=80,width=210)
+b=Button(dialer,text="1",font=("callibri",10,"bold"),bd=0,command=lambda:insert_number(1))
+b.pack()
+root.mainloop()
